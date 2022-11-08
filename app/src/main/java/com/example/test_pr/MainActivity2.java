@@ -14,7 +14,6 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.test_pr.Home.HomeFragment;
-import com.example.test_pr.product.Productfragment;
 import com.example.test_pr.user.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -43,9 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
                     case R.id.nav_home:
                         vp.setCurrentItem(0);
                         break;
-                    case R.id.products:
-                        vp.setCurrentItem(1);
-                        break;
+
                     case R.id.user:
                         vp.setCurrentItem(2);
                         break;
@@ -68,16 +65,15 @@ public class MainActivity2 extends AppCompatActivity {
             switch (position){
                 case 0: return new HomeFragment();
 
-                case 1: return new Productfragment();
 
-                case 2: return new UserFragment();
+                case 1: return new UserFragment();
             }
             return null;
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
     }
 }
